@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Grounding 2 - JS Day 05</title>
+</head>
+<body>
+
+<script>
+// More on Arrays & Vars
+// 1. Arrays can also be changed, element by element, and new elements can be added on arbitrary position
+
+//Change the code and add a function call after every line that will print the array in console (you need to add that function also, something like prinMytArray(dinosaurs) and for loop inside the function. Discuss the results with your buddy. 
+
+var dinosaurs = [];                // create an empty array 
+dinosaurs[0] = "T-Rex";	             // add first element	
+dinosaurs[1] = "Velociraptor";      // add 2nd element
+dinosaurs[2] = "Stegosaurus";       // add 3th element
+dinosaurs[5] = "Diplodocus";      // add 6th element
+
+for (var i = 0; i < dinosaurs.length; i++) {
+	console.log(dinosaurs[i]);
+}
+</script>
+
+<p id="nl"></p>
+
+<script>
+//2. Array elements don’t all have to be the same type. 
+// this array definition has been broken into several lines - this is completely fine, if you want it!!!
+//Try this array definition, and check the array values over console.log. Then, create a function that will output this array in some meaningful way (either to console, or, if you feel confident, use getElementById().innerHTML = …
+
+var amsterdam = [
+ 3,                            // array can have numbers
+ "Amsterdam", "Netherlands",    // array can have strings, here 2 in a single line
+  [1500, 1200, 1400, "Euros"] // array can have arrays, that can also be complex
+];
+
+console.log(amsterdam);
+console.log(amsterdam[0]);
+console.log(amsterdam[1]);
+console.log(amsterdam[2]);
+console.log(amsterdam[3]);
+
+console.log(amsterdam[3] [3]);
+
+document.getElementById("nl").innerHTML = ("For " + amsterdam[1] + ", " +  amsterdam[2] + " there are " + amsterdam[0] + " offers.<br>The prices are:<br>"
+ + amsterdam[3] [0] + " " +  amsterdam[3] [3] + ", <br>" 
+ + amsterdam[3] [1] + " " +  amsterdam[3] [3] + " and <br>" 
+ + amsterdam[3] [2] + " " +  amsterdam[3] [3] + ".");
+</script>
+
+<script>
+//3. Adding/removing elements at the end of an array is done with push() and pull() functions. Find information in Pre-Work or Internet regarding  shift() and unshift() and try to understand the outputs of the following code by printing the variables in console after every line: 
+
+animals = ["Polar Bear", "Monkey", "Cat", "Dog", "Llama"]
+console.log(animals);
+
+var lastAnimal = animals.pop();
+console.log(animals); // ["Polar Bear", "Monkey", "Cat", "Dog"]
+
+var newLastAnimal = animals.pop();
+console.log(animals); 
+
+var firstAnimal = animals.shift(); // The shift() method removes the first item of an array, and returns the new array.
+console.log(animals);
+
+var newLength = animals.unshift("Mouse", "Elephant");
+console.log(animals);
+
+// The unshift() method adds new items to the beginning of an array, and returns the new array.
+
+
+
+
+</script>
+
+
+
+
+
+	
+</body>
+</html>
+
+
+
