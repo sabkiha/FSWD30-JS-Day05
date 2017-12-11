@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS | Grounding 3</title>
+</head>
+<body>
+
+	<h1>Warm-up: arrays and loops</h1>
+
+	<p id="one"></p>
+
+	<script>
+		var actors = [
+		"Tom Hanks", 
+		"Leonardo di Caprio", 
+		"Jennifer Lawrence", 
+		"Daniel Radcliffe"
+		];
+
+		for (var i = 0; i < actors.length; i++) {
+			var awesome = " Awesome " + actors[i] + "<br>"
+			document.getElementById("one").innerHTML += awesome;
+		}
+	</script>
+
+	<h1>Warm-up 2: Fun with arrays: Buzzword / Bullshit Bingo</h1>
+
+	<p id="two"></p>
+
+	<script>
+	var array1 = ["deliverables", "globalization", "C#", "sweeten", "AWS"];
+	var array2 = ["collateral", "enabling", "provision", "in the zone", "framework"];
+	var array3 = ["AJAX", "gating item(s)", "FREE", "close the loop", "re-prioritization"];
+	var array4 = ["at Stanford, we...", "re-branding", "user-oriented", "team building", "fast-track"];
+	var array5 = ["culture change", "moving forward", "suite of tools", "empowerment", "regression test"];
+
+	var randomItem1 = array1[Math.floor(Math.random()*array1.length)];
+	var randomItem2 = array2[Math.floor(Math.random()*array2.length)];
+	var randomItem3 = array3[Math.floor(Math.random()*array3.length)];
+	var randomItem4 = array4[Math.floor(Math.random()*array4.length)];
+	var randomItem5 = array5[Math.floor(Math.random()*array5.length)];
+
+	document.getElementById("two").innerHTML = 
+	" " + randomItem1 + " is " + randomItem2 + " of " + randomItem3 + " coupled with " + randomItem4 + " approach that includes " + randomItem5 + ".";
+
+	</script>
+
+	<p id="three"></p>
+
+	<script>
+		var randomBodyParts = ["Face", "Nose", "Hair"];
+		var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+		var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+
+		var randomItem6 = randomBodyParts[Math.floor(Math.random()*randomBodyParts.length)];
+		var randomItem7 = randomAdjectives[Math.floor(Math.random()*randomAdjectives.length)];
+		var randomItem8 = randomWords[Math.floor(Math.random()*randomWords.length)];
+
+		document.getElementById("three").innerHTML = 
+		"Your " + randomItem6 + " is a " + randomItem7 + " " + randomItem8 + ".";
+
+	</script>
+
+	<h1>Do more with logical operators: if/else, find minimum and maximum</h1>
+
+	<h3>Max of two numbers</h3>
+
+	<script>
+		var one = 5;
+		var two = 10;
+		document.write(one + ", " + two + "<br>");
+		
+		if (one > two == true) {
+			document.write("The Max is: " + one + "<br>")
+		} else {
+			document.write("The Max is: " + two + "<br>")
+		}
+		
+	</script>
+
+	<h3>Min of two numbers</h3>
+		
+	<script>
+		var one = 8;
+		var two = 12;
+		document.write(one + ", " + two + "<br>");	
+
+		if (one < two == true) {
+			document.write("The Min is: " + one + "<br>")
+		} else {
+			document.write("The Min is: " + two + "<br>")
+		}
+
+	</script>
+
+	<h3>Maximum of three variables</h3>
+
+	<script>
+		var one = 60;
+		var two = 30;
+		var three = 25;
+		document.write(one + ", " + two + ", " + three + "<br>");
+		
+		var oneTwo = ".";
+		
+		if (one < two == true) {
+			var oneTwo = two;
+		} else {
+			var oneTwo = one;
+		}
+		
+		var max = ".";
+		
+		if (oneTwo < three == true) {
+			var max = three;
+		} else {
+			var max = oneTwo;
+		}
+
+		document.write(max);
+	</script>
+
+	<h3>Find the maximum in an array</h3>
+
+	<script>
+		 array = [1, 8, 12, 6, 23];
+
+		document.write("Array: " + array + "<br>");
+		var max = 0;
+		var tempMax = 0;
+
+		 for (var i = 0; i < array.length; i++) {
+		 	if (array[i] < array[i+1] == true) {
+		 		var tempMax = array[i+1];
+		 	} else { var tempMax = array[i];
+		 	}
+		 	if (max < tempMax == true) {
+		 		var max = tempMax;
+		 		} else { var max = max;
+		 		} 
+		 }
+
+		 document.write("The Max is: " + max + "<br>");
+	</script>
+
+	<h1>Grounding on Objects</h1>
+	
+	<script>
+		var cat = {
+			"legs": 4,
+			"name": "Tom",
+			"color": "pale blue"
+		};
+		console.log("cat has " + cat.legs);
+		console.log("cat has " + cat[1]);
+
+		var dog = {
+			"legs": 4,
+			"name": "Poppy",
+			"age": 6,
+			"eyeColor": "green"
+		}
+
+		document.write("The cat is called: " + cat.name + "<br>");
+		document.write("The dog has the eye colour: " + dog.eyeColor + "<br>");
+
+		var cat2 = {};
+		console.log(cat2);
+		cat2["legs"] = 3;
+		console.log(cat2);
+		cat2["name"] = "Reality";
+		console.log(cat2);
+		cat2["color"] = "Tan";
+		console.log(cat2);
+		cat2["eyeColor"] = "blue";
+		console.log(cat2);
+
+		// document.write(
+		// 	for(var key in objects) {
+  //   			var value = objects[key];
+		// 	}
+		// );
+
+		cat2["legs"] = 4;
+
+		document.write(cat2.getOwnPropertyNames(cat2))
+
+
+
+	</script>
+
+
+
+	
+
+
+
+
+	
+</body>
+</html>
